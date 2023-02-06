@@ -1,7 +1,10 @@
 //Connecting to Database (MongoDB)
 
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://localhost:27017/inotebook?readPreference=primary&appname=MongoDB%20Compass&ssl=false"
+const mongoURI = "mongodb+srv://vrinxsystem:rajat-123@cluster0.zkbwolf.mongodb.net/iNotebook";
+
+
+
 
 const connectToMongo = () => {
 

@@ -41,12 +41,12 @@ const Signup = (props) => {
 
   return (
     <>
-      <div class="background" style={{ zIndex: "-2" }}>
+      <div class="background shapes" style={{ zIndex: "-2" }}>
         <div class="shape"></div>
         <div class="shape"></div>
       </div>
 
-      <form onSubmit={handleSubmit} style={{ zIndex: "-1" }}>
+      <form className="signup-form" onSubmit={handleSubmit} style={{ zIndex: "-1" }}>
         <h3 style={{ marginBottom: "1.5rem" }}>Create an account</h3>
         <div>
           <input

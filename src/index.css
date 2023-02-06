@@ -11,6 +11,7 @@ body {
   font-family: 'Poppins', sans-serif;
 
   max-height: 100%;
+  /* width: 100%; */
   /* background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
   
 }
@@ -152,6 +153,16 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
+
+.modal-form
+{
+  background-color: rgba(255,255,255,0.13);
+  /* border: 2px solid rgba(255,255,255,0.1); */
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
 form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
@@ -203,4 +214,59 @@ button{
   width:90%;
   height:390px;
   position:relative;
+}
+
+.login-container
+{
+  margin-top: 10rem;
+}
+
+.navbar-brand
+{
+  color:white;
+  font-weight:800;
+  font-size:1.8rem;
+  margin-left:2rem;
+}
+
+
+@media only screen and (max-width: 988px) {
+  
+  .navbar-brand
+  {
+    margin:auto;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+  }
+
+  .signup-form 
+  {
+    height:470px;
+  }
+
+  .signup-form h3 
+  {
+    font-size:1.7rem;
+  }
+}
+
+.shapes
+{
+  z-index:-2;
+  margin-top:4rem;
+  max-width:100%;
+}
+
+.login-form, .signup-form
+{
+  z-index:-1;
+  margin-top:4rem;
+  max-width:90%;
+}
+
+@media only screen and (min-width: 988px) {
+  .shapes, .login-form, .signup-form
+  {
+    margin-top: 2rem;
+  }
 }

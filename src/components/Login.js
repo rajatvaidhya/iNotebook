@@ -60,24 +60,26 @@ const Login = (props) => {
         </div> */}
 
 
-            <div class="background" style={{zIndex:"-2"}}>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </div>
+            <div class="background shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
 
-            <form onSubmit={handleSubmit} style={{zIndex:"-1"}}>
-                <h3>Login Here</h3>
+                <form className="login-form" onSubmit={handleSubmit}>
+                    <h3>Login Here</h3>
 
-                <label for="username">Email </label>
-                {/* <input type="text" placeholder="Email or Phone" id="username"/> */}
-                <input type="email" onChange={onChange} value={credentials.email} id="username" name="email" placeholder='Email address'/>
+                    <label for="username">Email </label>
+                    {/* <input type="text" placeholder="Email or Phone" id="username"/> */}
+                    <input type="email" onChange={onChange} value={credentials.email} id="username" name="email" placeholder='Email address'/>
 
-                <label for="password">Password</label>
-                {/* <input type="password" placeholder="Password" id="password"/> */}
-                <input type="password" onChange={onChange} value={credentials.password} id="password" name="password" placeholder='Password'/>
+                    <label for="password">Password</label>
+                    {/* <input type="password" placeholder="Password" id="password"/> */}
+                    <input type="password" onChange={onChange} value={credentials.password} id="password" name="password" placeholder='Password'/>
 
-                <button type="submit">Log In</button>
-            </form>
+                    <button type="submit">Log In</button>
+                </form>
+
+           
     </>
     )
 }

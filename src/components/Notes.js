@@ -56,27 +56,27 @@ const Notes = (props) => {
       </button>
 
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
+        <div className="modal-dialog modal-form">
+          <div className="modal-content modal-form">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+              <h5 className="modal-title" id="exampleModalLabel" style={{color:'white'}}>Edit Note</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <form className="my-3">
+              <div className="my-3">
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label">Title</label>
-                  <input type="text" className="form-control" onChange={onChange} id="etitle" value={note.etitle} name="etitle" aria-describedby="emailHelp" minLength={5} required/>
+                  <label htmlFor="title" className="form-label" style={{color:'white'}}>Title</label>
+                  <input type="text" style={{color:"white", outline:'none', border: '2px solid rgba(255,255,255,0.1)'}} onChange={onChange} id="etitle" value={note.etitle} name="etitle" aria-describedby="emailHelp" minLength={5} required/>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="description" className="form-label">Description</label>
-                  <input type="text" className="form-control" onChange={onChange} id="edescription" value={note.edescription} name="edescription" minLength={5} required/>
+                  <label htmlFor="description" className="form-label" style={{color:'white'}}>Description</label>
+                  <input type="text" style={{color:"white", outline:'none', border: '2px solid rgba(255,255,255,0.1)'}} onChange={onChange} id="edescription" value={note.edescription} name="edescription" minLength={5} required/>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="tag" className="form-label">Tag</label>
-                  <input type="text" className="form-control" onChange={onChange} id="etag" value={note.etag} name="etag" />
+                  <label htmlFor="tag" className="form-label" style={{color:'white'}}>Tag</label>
+                  <input type="text" style={{color:"white", outline:'none', border: '2px solid rgba(255,255,255,0.1)'}} onChange={onChange} id="etag" value={note.etag} name="etag" />
                 </div>
-              </form>
+              </div>
             </div>
             <div className="modal-footer">
               <button type="button" ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -96,6 +96,10 @@ const Notes = (props) => {
         {notes.map((note) => {
           return <Noteitem key={note._id} updateNote={updateNote} note={note} showAlert={props.showAlert}/>;
         })}
+      </div>
+
+      <div style={{textAlign:'center', fontSize:'12px', marginTop:'2rem'}}>
+        <p style={{color:'white'}}>Made with 💖 by Rajat Vaidhya</p>
       </div>
     </>
   );

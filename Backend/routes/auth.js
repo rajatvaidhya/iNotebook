@@ -7,8 +7,8 @@ const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
 
 
-const JWT_SEC = 'enclave';
-
+// const JWT_SEC = process.env.REACT_APP_JWT_SEC;
+const JWT_SEC = "enclave";
 
 
 
